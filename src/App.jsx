@@ -4,34 +4,36 @@ import Shop from "./shop/shop";
 import About from "./About us/About";
 import Contact from "./Contact/Contact";
 import Categories from "./Categories/Categories";
+import Home from "./Home/Home";
 
 
 
 
-function EntryPage() {
-  return (
-    <>
-    <h1>Entry page</h1>
-    </>
-  )
-}
+// function EntryPage() {
+//   return (
+//     <>
+//     <h1>Entry page</h1>
+//     </>
+//   )
+// }
 
 
 
 export default function App() {
   return (
     <>
-    <Nav />
+      <Nav />
 
-    <main className="page-container">
-    <Routes>
-      <Route path="/" element={<EntryPage />} />
-      <Route path="/shop" element={<Shop />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/categories" element={<Categories />} />
-    </Routes>
-    </main>
+      <main className="page-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop/:category" element={<Shop />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/categories" element={<Categories />} />
+        </Routes>
+      </main>
     </>
   )
 }
